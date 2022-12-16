@@ -12,6 +12,8 @@ class Movies{
         $this->genre = $_z;
 
     }
+
+
 }
 
 ?>

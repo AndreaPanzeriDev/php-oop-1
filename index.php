@@ -26,12 +26,14 @@ $salviamoidati = [];
     </header>
     <main class="text-center">
 
-        <form method="GET">
+        <form action="" method="GET">
             <input type="text" placeholder="Inserisci il nome del film" name="name">
             <input type="text" placeholder="Inserisci il genere del film" name="genre">
             <input type="text" placeholder="Inserisci l'anno del film" name="age">
             <button>Vai</button>
         </form>
+
+
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </main>
@@ -42,16 +44,14 @@ $salviamoidati = [];
 <?php
 
 
-
-
 if (!empty($_GET) && !empty($_GET['name']) && !empty($_GET['genre']) && !empty($_GET['age'])) {
     $name = $_GET['name'];
     $genre = $_GET['genre'];
     $age = $_GET['age'];
 
     $movie = new Movies($name, $age, $genre);
-    var_dump($movie);
-    $salviamoidati_push($movie);
+    $salviamoidati[] = $movie;
     var_dump($salviamoidati);
+    
 }
 
